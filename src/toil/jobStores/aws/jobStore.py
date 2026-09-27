@@ -210,7 +210,7 @@ class AWSJobStore(AbstractJobStore, HintedJobStore, URLAccess):
             self.s3_resource,
             self.bucket_name,
             region=self.region,
-            public=True,
+            public=False,
             encryptable=True,
         )  # type: ignore
         super().initialize(config)
